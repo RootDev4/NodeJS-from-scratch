@@ -1,0 +1,40 @@
+<!-- Include head.js and navbar.ejs -->
+<%- include('partials/head.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<main role="main" class="container">
+
+    <h1 class="pb-3">Sign in</h1>
+
+    <!-- Display error messages -->
+    <% if (messages.error) { %>
+    <div class="alert alert-danger"><%= messages.error %></div>
+    <% } %>
+
+    <!-- Print success messages -->
+    <% if (messages.success) { %>
+    <div class="alert alert-success"><%= messages.success %></div>
+    <% } %>
+
+    <form method="POST" action="/login" class="w-50">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" name="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+
+    <div class="mt-5">
+        <small>
+            Don't have an account? <a class="text-sm" href="/register">Sign up</a>
+        </small>
+    </div>
+
+</main>
+
+<!-- Include foot.ejs -->
+<%- include('partials/foot.ejs') %>

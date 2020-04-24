@@ -1,0 +1,13 @@
+<!-- Include head.js and navbar.ejs -->
+<%- include('partials/head.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<main role="main" class="container">
+
+    <h1 class="pb-3">Hello <%= username.email %></h1>
+    <a href="/logout" class="btn btn-danger btn-sm">Logout</a>
+
+</main>
+
+<!-- Include foot.ejs -->
+<%- include('partials/foot.ejs') %>

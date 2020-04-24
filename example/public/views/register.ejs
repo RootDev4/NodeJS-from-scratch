@@ -1,0 +1,40 @@
+<!-- Include head.js and navbar.ejs -->
+<%- include('partials/head.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<main role="main" class="container">
+
+    <h1 class="pb-3">Sign up</h1>
+
+    <!-- Display error messages -->
+    <% if (messages.error) { %>
+    <div class="alert alert-danger"><%= messages.error %></div>
+    <% } %>
+
+    <form method="POST" action="/register">
+        <div class="form-group">
+            <label for="name">Email address</label>
+            <input type="email" class="form-control" id="name" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Repeat password</label>
+            <input type="password" class="form-control" id="pwdRep" name="repPass" placeholder="Repeat password">
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Sign up for free</button>
+    </form>
+
+    <div class="mt-5">
+        <small>
+            Already have an account? <a class="text-sm" href="/login">Sign in</a>
+        </small>
+    </div>
+
+</main>
+
+<!-- Include foot.ejs -->
+<%- include('partials/foot.ejs') %>
