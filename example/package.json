@@ -1,0 +1,25 @@
+{
+  "name": "NodeJS-from-Scratch",
+  "version": "1.0.0",
+  "description": "Building a NodeJS web application from scratch.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "startDev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.9.10",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}
