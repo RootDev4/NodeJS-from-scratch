@@ -2,6 +2,7 @@ const express = require('express')          // Fast, unopinionated, minimalist w
 const session = require('express-session')  // Express middleware for working with session-based requests
 const cors = require('cors')                // Middleware to enable Cross-Origin Resource Sharing (CORS)
 const passport = require('passport')        // Authentication middleware for NodeJS
+const path = require('path')                // Provides utilities for working with file and directory paths.
 
 const app = express()   // Initialize express module
 app.use(cors())         // Use cors middleware to enable Cross-Origin Resource Sharing (CORS)
