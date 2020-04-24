@@ -62,3 +62,24 @@ See well documented **routes.js** file inside /examples directory of this reposi
 
 ### Add templates
 See files inside /public/views directory. For this example, the Bootstrap starter template was used.
+
+### Add database support with Mongoose
+Open a new Mongoose connection is very easy (see **server.js** for documentation).
+```javascript
+mongoose.connect('mongodb://localhost:27017/nodefromscratch', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+mongoose.connection.on('error', () => console.log('Connection to database failed'))
+mongoose.connection.once('open', () => console.log('Database successfully connected'))
+```
+
+Mongoose uses so called schemes to create a collection (better known as a table in relational databases). See **user-schema.js** file inside /models directory for a detailed documentation
+```javascript
+const userSchema = new Schema({
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+}, { timestamps: true })
+```
+
+Read more about collections and documents here: [Introduction to Mongoose for MongoDB](https://www.freecodecamp.org/news/introduction-to-mongoose-for-mongodb-d2a7aa593c57/)
+
+### Add user authentication
+See well documented **passport-config.js** file.
